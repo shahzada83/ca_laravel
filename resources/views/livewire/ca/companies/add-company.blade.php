@@ -144,7 +144,9 @@
 
   
     <div class="mt-6 flex items-center justify-end gap-x-6">
-      <button type="button" class="text-sm font-semibold leading-6" wire:click="back_button">Back</button>
+      <a  href="{{ route('company.view') }}" class="text-sm font-semibold leading-6">
+          Back      
+      </a>
 
       <x-secondary-button wire:click.prevent="save_company_records" wire:target="save_company_records">
           Save
