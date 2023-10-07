@@ -27,25 +27,25 @@
                 <!-- Dropdown menu -->
                 <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
                     <ul class="py-1" aria-labelledby="dropdownLargeButton">
-                    <li>
-                        <a href="{{ route('company.view') }}" 
-                            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">
-                            View Companies
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
-                    </li>   
-                    <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
-                    </li>
+                        <li>
+                            <a href="{{ route('company.view') }}" 
+                                class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">
+                                View Companies
+                            </a>
+                        </li>
+                        
+                        {{-- <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+                        </li>   
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+                        </li> --}}
                     </ul>
-                    <div class="py-1">
-                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
-                    </div>
+                   
                 </div>
             </li>
-            <li>
+
+            {{-- <li>
                 <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
             </li>
             <li>
@@ -53,11 +53,11 @@
             </li>
             <li>
                 <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
-            </li>
+            </li> --}}
 
             <li>
                 <div class=" ml-2">
-                    <button type="button" x-bind:class="darkMode ? 'bg-indigo-500' : 'bg-gray-200'"
+                    <button type="button" x-bind:class="darkMode ? 'bg-indigo-500' : 'bg-gray-400'"
                         x-on:click="darkMode = !darkMode"
                         class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         role="switch" aria-checked="false">

@@ -16,11 +16,11 @@
         <x-form-container>
           
           <x-form colSpan="2" label="Parent company name (Optional)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="parent_cmp_name"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="parent_name"/>
           </x-form>
           
           <x-form colSpan="2" label="Managing company name (Optional)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="managing_cmp_name"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="managing_name"/>
           </x-form>
 
         </x-form-container> 
@@ -34,61 +34,61 @@
     
         <x-form-container>
           <x-form colSpan="2" label="Type" isRequired="true" >
-            <x-select wire:dirty.class="border-red-500" wire:model.lazy="type"  autocomplete="type" :options="['Company', 'Individual']"></x-select>
+            <x-select wire:dirty.class="border-red-500" wire:model="type"  autocomplete="type" :options="['Company', 'Individual']"></x-select>
             <x-input-error :messages="$errors->get('type')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="Company name" isRequired="true" >
-            <x-input type="text" placeholder="Enter Company Name" wire:dirty.class="border-red-500" wire:model.lazy="name"/>
+            <x-input type="text" placeholder="Enter Company Name" wire:dirty.class="border-red-500" wire:model="name"/>
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="Establishment Date" isRequired="false" >
-            <x-input type="date" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="est_date"/>
+            <x-input type="date" placeholder="" wire:dirty.class="border-red-500" wire:model="est_date"/>
           </x-form>
           
         </x-form-container>
         
         <x-form-container>
           <x-form colSpan="4" label="Address" isRequired="false" >
-            <x-input type="text" placeholder="" class="w-full" wire:dirty.class="border-red-500" wire:model.lazy="address"/>
+            <x-input type="text" placeholder="" class="w-full" wire:dirty.class="border-red-500" wire:model="address"/>
           </x-form>
         </x-form-container>  
 
         <x-form-container>
           <x-form colSpan="2" label="City" isRequired="true" >
-            <x-input type="text" placeholder="Enter city" wire:dirty.class="border-red-500" wire:model.lazy="city"/>
+            <x-input type="text" placeholder="Enter city" wire:dirty.class="border-red-500" wire:model="city"/>
             <x-input-error :messages="$errors->get('city')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="Zip/Postal Code" isRequired="true" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="pin"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="pin"/>
             <x-input-error :messages="$errors->get('pin')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="State" isRequired="true" >
-            <x-select wire:dirty.class="border-red-500" wire:model.lazy="state"  autocomplete="state" :options="['Bihar', 'Jharkhand']"></x-select>
+            <x-select wire:dirty.class="border-red-500" wire:model="state"  autocomplete="state" :options="['Bihar', 'Jharkhand']"></x-select>
             <x-input-error :messages="$errors->get('state')" class="mt-2" />
           </x-form>
         </x-form-container>
 
         <x-form-container>
           <x-form colSpan="3" label="Primary Email-ID" isRequired="true" >
-            <x-input type="text" placeholder="Enter Email-ID" wire:dirty.class="border-red-500" wire:model.lazy="primary_email"/>
+            <x-input type="text" placeholder="Enter Email-ID" wire:dirty.class="border-red-500" wire:model="primary_email"/>
             <x-input-error :messages="$errors->get('primary_email')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="3" label="Secondary Email-ID (Optional)" isRequired="false" >
-            <x-input type="text" placeholder="Enter Secondary Email-ID" wire:dirty.class="border-red-500" wire:model.lazy="secondary_email"/>
+            <x-input type="text" placeholder="Enter Secondary Email-ID" wire:dirty.class="border-red-500" wire:model="secondary_email"/>
           </x-form>
 
           <x-form colSpan="3" label="Primary Mobile No." isRequired="true" >
-            <x-input type="number" placeholder="Enter Primary Mobile No." wire:dirty.class="border-red-500" wire:model.lazy="primary_phone"/>
+            <x-input type="number" placeholder="Enter Primary Mobile No." wire:dirty.class="border-red-500" wire:model="primary_phone"/>
             <x-input-error :messages="$errors->get('primary_phone')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="3" label="Secondary Mobile No." isRequired="false" >
-            <x-input type="number" placeholder="Enter Secondary Mobile No." wire:dirty.class="border-red-500" wire:model.lazy="secondary_phone"/>
+            <x-input type="number" placeholder="Enter Secondary Mobile No." wire:dirty.class="border-red-500" wire:model="secondary_phone"/>
           </x-form>
 
         </x-form-container>
@@ -103,39 +103,39 @@
         <x-form-container>
           
           <x-form colSpan="2" label="Company Aadhar No." isRequired="true" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="director_aadhar_no"/>
-            <x-input-error :messages="$errors->get('director_aadhar_no')" class="mt-2" />
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="aadhar"/>
+            <x-input-error :messages="$errors->get('aadhar')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="Aadhar Linked Mobile No." isRequired="true" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="director_aadhar_linked_mobile_no"/>
-            <x-input-error :messages="$errors->get('director_aadhar_linked_mobile_no')" class="mt-2" />
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="aadhar_linked_phone"/>
+            <x-input-error :messages="$errors->get('aadhar_linked_mobile')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="2" label="Aadhar Linked Email-ID." isRequired="true" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="director_aadhar_linked_email_id"/>
-            <x-input-error :messages="$errors->get('director_aadhar_linked_email_id')" class="mt-2" />
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="aadhar_linked_email"/>
+            <x-input-error :messages="$errors->get('aadhar_linked_email')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="3" label="CIN (Corporate Identity Number)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="cmp_cin_no"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="cin"/>
           </x-form>
 
           <x-form colSpan="3" label="PAN (Permanent Account Number)" isRequired="true" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="cmp_pan_no"/>
-            <x-input-error :messages="$errors->get('cmp_pan_no')" class="mt-2" />
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="pan"/>
+            <x-input-error :messages="$errors->get('pan')" class="mt-2" />
           </x-form>
 
           <x-form colSpan="3" label="TAN (Tax Deduction and Collection Account Number)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="cmp_tan_no"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="tan"/>
           </x-form>
 
           <x-form colSpan="3" label="TIN (Taxpayer Identification Number)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="cmp_tin_no"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="tin"/>
           </x-form>
 
           <x-form colSpan="3" label="GSTIN (Goods and Services Tax Identification Number)" isRequired="false" >
-            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model.lazy="cmp_gstin_no"/>
+            <x-input type="text" placeholder="" wire:dirty.class="border-red-500" wire:model="gstin"/>
           </x-form>
           
         </x-form-container>
@@ -144,9 +144,7 @@
 
   
     <div class="mt-6 flex items-center justify-end gap-x-6">
-      <a  href="{{ route('company.view') }}" class="text-sm font-semibold leading-6">
-          Back      
-      </a>
+      <a href="{{ route('company.view') }}" class="text-sm font-semibold leading-6" wire:click="back_button">Back</a>
 
       <x-secondary-button wire:click.prevent="save_company_records" wire:target="save_company_records">
           Save
@@ -155,3 +153,191 @@
     </div>
   </form>
 </div>
+
+{{-- <form>
+  <div class="space-y-12">
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900">Profile</h2>
+      <p class="mt-1 text-sm leading-6 text-gray-600">This information will be displayed publicly so be careful what you share.</p>
+
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-4">
+          <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
+          <div class="mt-2">
+            <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+              <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">workcation.com/</span>
+              <input type="text" autocomplete="username" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-full">
+          <label for="about" class="block text-sm font-medium leading-6 text-gray-900">About</label>
+          <div class="mt-2">
+            <textare  rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textare>
+          </div>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
+        </div>
+
+        <div class="col-span-full">
+          <label for="photo" class="block text-sm font-medium leading-6 text-gray-900">Photo</label>
+          <div class="mt-2 flex items-center gap-x-3">
+            <svg class="h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+            </svg>
+            <button type="button" class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Change</button>
+          </div>
+        </div>
+
+        <div class="col-span-full">
+          <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover photo</label>
+          <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+            <div class="text-center">
+              <svg class="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+              </svg>
+              <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                  <span>Upload a file</span>
+                  <inpuupload" upload" type="file" class="sr-only">
+                </label>
+                <p class="pl-1">or drag and drop</p>
+              </div>
+              <p class="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+      <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+          <div class="mt-2">
+            <input type="text" namename" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+          <div class="mt-2">
+            <input type="text" namename" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-4">
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <inpu  type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Country</label>
+          <div class="mt-2">
+            <selec  autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+              <option>United States</option>
+              <option>Canada</option>
+              <option>Mexico</option>
+            </selec>
+          </div>
+        </div>
+
+        <div class="col-span-full">
+          <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Street address</label>
+          <div class="mt-2">
+            <input type="text" addressaddress" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-2 sm:col-start-1">
+          <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+          <div class="mt-2">
+            <input type="text" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="region" class="block text-sm font-medium leading-6 text-gray-900">State / Province</label>
+          <div class="mt-2">
+            <input type="text" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">ZIP / Postal code</label>
+          <div class="mt-2">
+            <input type="text" codecode" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900">Notifications</h2>
+      <p class="mt-1 text-sm leading-6 text-gray-600">We'll always let you know about important changes, but you pick what else you want to hear about.</p>
+
+      <div class="mt-10 space-y-10">
+        <fieldset>
+          <legend class="text-sm font-semibold leading-6 text-gray-900">By Email</legend>
+          <div class="mt-6 space-y-6">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <inpu  type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              </div>
+              <div class="text-sm leading-6">
+                <label for="comments" class="font-medium text-gray-900">Comments</label>
+                <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <inpu  type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              </div>
+              <div class="text-sm leading-6">
+                <label for="candidates" class="font-medium text-gray-900">Candidates</label>
+                <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <inpu  type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              </div>
+              <div class="text-sm leading-6">
+                <label for="offers" class="font-medium text-gray-900">Offers</label>
+                <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-sm font-semibold leading-6 text-gray-900">Push Notifications</legend>
+          <p class="mt-1 text-sm leading-6 text-gray-600">These are delivered via SMS to your mobile phone.</p>
+          <div class="mt-6 space-y-6">
+            <div class="flex items-center gap-x-3">
+              <inpueverything" notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              <label for="push-everything" class="block text-sm font-medium leading-6 text-gray-900">Everything</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <inpuemail" notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              <label for="push-email" class="block text-sm font-medium leading-6 text-gray-900">Same as email</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <inpunothing" notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              <label for="push-nothing" class="block text-sm font-medium leading-6 text-gray-900">No push notifications</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+  </div>
+</form> --}}

@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
-use App\Http\Livewire\Ca\Companies\AddCompany;
-use App\Http\Livewire\Ca\Companies\ViewCompanies;
+
+use App\Livewire\Ca\Companies\AddCompany;
+use App\Livewire\Ca\Companies\ViewCompanies;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::get('/', [AuthenticatedSessionController::class, 'create'])->name('login');
@@ -17,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::get('cmpView', ViewCompanies::class)->name('company.view');
     Route::get('cmpAdd', AddCompany::class)->name('company.add');
     Route::get('viewIndCmp/{company_id?}', AddCompany::class)->name('company.viewIndCmp');
-    Route::put('cmpEdit', AddCompany::class)->name('company.edit');
+    Route::get('cmpEdit/{companyID}', AddCompany::class)->name('company.edit');
     Route::delete('cmpPurge', AddCompany::class)->name('company.destroy');
     // Profile    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
