@@ -1,6 +1,6 @@
 <div>
 
-        @if(!empty($companies))
+       
             {{-- <livewire:company-table/> --}}
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <div class="p-2 flex items-center justify-between pb-4 bg-white dark:bg-gray-900">
@@ -19,12 +19,21 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                                 </svg>
                             </div>
-                            <input type="text" id="table-search-users" wire:model.live="search_field" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
+                            <input  type="text" 
+                                    id="table-search-users" 
+                                    wire:model.live="search_field" 
+                                    class=" block 
+                                            p-2 pl-12 
+                                            text-sm text-gray-900 border 
+                                            border-gray-300 rounded-lg w-80 bg-gray-50 
+                                            focus:ring-blue-500 focus:border-blue-500 
+                                            dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                                            placeholder="Type, Name, Email, Phone, PAN, GSTIN, TAN, TIN, CIN">
                         </div>
                     </div>
                     
                 </div>
-
+            @if(!empty($companies))
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs font-bold text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -92,12 +101,17 @@
                         @endforeach
                     </tbody>
                 </table>
+
+                <div class="mt-3">
+                    {{ $companies->links() }}
+                </div>
+            @else
+                <div class="py-2 font-semibold text-gray-900 dark:text-gray-100 text-md">
+                    No company record found.
+                </div>
+            @endif 
             </div>
-        @else
-            <div class="py-2 font-semibold text-gray-900 dark:text-gray-100 text-md">
-                No company record found.
-            </div>
-        @endif 
+        
    
 
     {{-- <x-link href="{{ route('company.add') }}" link_text = "Add Company"/> --}}

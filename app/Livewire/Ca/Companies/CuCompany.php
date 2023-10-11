@@ -10,7 +10,7 @@ use Livewire\Attributes\Locked;
 use App\Models\ca\CompanyDetail;
 
 #[Title('Add|Update Company')] 
-class AddCompany extends Component
+class CuCompany extends Component
 {
     #[Locked] 
     public $company_id;
@@ -101,30 +101,6 @@ class AddCompany extends Component
                                       ), 
             );
         }
-        
-
-        // $this->type = $companyData->type;
-        // // $this->company_id = $companyData->company_id;
-        // $this->name = $companyData->name;
-        // $this->est_date = $companyData->est_date;
-        // $this->address = $companyData->address;
-        // $this->city = $companyData->city;
-        // $this->state = $companyData->state;
-        // $this->pin = $companyData->pin;
-        // $this->primary_email = $companyData->primary_email;
-        // $this->secondary_email = $companyData->secondary_email;
-        // $this->primary_phone = $companyData->primary_phone;
-        // $this->secondary_phone = $companyData->secondary_phone;
-        
-        // $this->cmp_pan_no = $companyData->company_details->pan;
-        // $this->director_aadhar_no = $companyData->company_details->aadhar;
-        // $this->director_aadhar_linked_phone = $companyData->company_details->aadhar_linked_phone;
-        // $this->director_aadhar_linked_email_id = $companyData->company_details->aadhar_linked_email;
-        // $this->cmp_gstin_no = $companyData->company_details->GSTIN;
-        // $this->cmp_tan_no = $companyData->company_details->TAN;
-        // $this->cmp_cin_no = $companyData->company_details->CIN;
-        // $this->cmp_tin_no = $companyData->company_details->TIN;
-        
     }
 
     public function save_company_records()
@@ -174,7 +150,7 @@ class AddCompany extends Component
 
     public function render()
     {
-        return view('livewire.ca.companies.add-company')
-        ->layout('layouts.app', ['header'=>'Add Company Details']);
+        return view('livewire.ca.companies.cu-company')
+        ->layout('layouts.app', ['header'=> ($this->company_id == 0) ? 'Add Company Details' : 'Update Company Details']);
     }
 }

@@ -18,14 +18,14 @@
                 <a href="{{ route('dashboard') }}" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
             </li>
             <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                <button id="dropdownNavbarCompanyLink" data-dropdown-toggle="dropdownNavbarCompany" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
                     Company 
                     <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                <div id="dropdownNavbarCompany" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
                     <ul class="py-1" aria-labelledby="dropdownLargeButton">
                         <li>
                             <a href="{{ route('company.view') }}" 
@@ -34,21 +34,82 @@
                             </a>
                         </li>
                         
-                        {{-- <li>
-                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+                        <li>
+                            <a href="{{ route('company.roc') }}" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">ROC</a>
+                        </li>   
+
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Income Tax</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">GST Payment Status</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">GST Status</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </li>
+
+            <li>
+                <button id="dropdownNavbarUsersLink" data-dropdown-toggle="dropdownNavbarUsers" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                    Users 
+                    <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbarUsers" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                        
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Roles</a>
                         </li>   
                         <li>
-                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
-                        </li> --}}
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Permissions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Users</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Activity Log</a>
+                        </li>
+                        
+                    </ul>
+                   
+                </div>
+            </li>
+
+            <li>
+                <button id="dropdownNavbarSettingsLink" data-dropdown-toggle="dropdownNavbarSettings" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
+                    Settings 
+                    <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbarSettings" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                        
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Financial Year</a>
+                        </li>   
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Assessment Year</a>
+                        </li>
+                        
                     </ul>
                    
                 </div>
             </li>
 
             {{-- <li>
-                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
-            </li>
-            <li>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Settings</a>
+            </li> --}}
+            {{-- <li>
                 <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Pricing</a>
             </li>
             <li>
@@ -56,6 +117,7 @@
             </li> --}}
 
             <li>
+                {{-- Dark mode switch --}}
                 <div class=" ml-2">
                     <button type="button" x-bind:class="darkMode ? 'bg-indigo-500' : 'bg-gray-400'"
                         x-on:click="darkMode = !darkMode"

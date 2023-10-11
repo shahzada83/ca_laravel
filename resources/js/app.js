@@ -5,3 +5,6 @@ import 'flowbite';
 // window.Alpine = Alpine;
 
 // Alpine.start();
+
+import 'cropperjs/dist/cropper.css';
+import Cropper from 'cropperjs';

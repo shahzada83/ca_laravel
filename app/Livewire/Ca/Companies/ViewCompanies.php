@@ -19,6 +19,9 @@ class ViewCompanies extends Component
 
 
     public function updatedSearchField(){
+        // Reset Pagination
+        $this->resetPage(); 
+        
         $companies = Company::join('company_details', 'company_details.company_id', 'companies.id')
             ->where('companies.type', 'like', '%' . $this->search_field . '%')
             ->orWhere('companies.name', 'like', '%' . $this->search_field . '%')
